@@ -1,2 +1,3 @@
 [submodule "home-templates"]
+	path = home-templates
 	url = https://github.com/AmpCoding/home-templates.git
