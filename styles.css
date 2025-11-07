@@ -1,0 +1,173 @@
+/*
+  Developer: [Your Name Here]
+  Date: [Current Date, e.g., November 5, 2025]
+  File Name: styles.css
+  Description: Central external stylesheet providing consistent typography, color scheme, and layout across all web pages.
+*/
+
+/* 1. GOOGLE FONT IMPORT (Using Inter as a modern, clean, default font) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+/* GLOBAL STYLES (Element Selector) */
+:root {
+    /* Define variables for easy theme customization */
+    --primary-font: 'Inter', sans-serif;
+    --text-dark: #2c3e50;    /* Dark Navy/Charcoal */
+    --background-light: #f4f7f6; /* Very light gray/off-white */
+    --accent-color: #3498db; /* Bright Blue for links/accents */
+    --border-color: #bdc3c7; /* Light gray for borders */
+}
+
+/* Base Body Styles (Element Selector) */
+body {
+    /* Font Family, Weight, and Size */
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 16px;
+
+    /* Background & Text Color */
+    background-color: var(--background-light); /* Background color for the whole viewport */
+    color: var(--text-dark); /* Default text color */
+
+    /* Layout & Margins/Padding */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* MAIN CONTAINER (ID Selector) - Centers Content and adds visual box */
+#site-container {
+    max-width: 1000px;
+    margin: 0 auto; /* Centers the container */
+    background-color: white; /* Content area is white */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    /* No padding here, padding is applied to article/footer sections */
+}
+
+/* 2. HEADER STYLING (Element Selector) */
+header {
+    background-color: var(--text-dark);
+    color: var(--background-light);
+    padding: 20px 0; /* Padding for header text */
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+header h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. NAVIGATION STYLING (Element Selector) */
+nav {
+    background-color: var(--accent-color);
+    padding: 10px 0; /* Padding around the navigation bar */
+}
+
+/* Main Navigation UL */
+nav ul {
+    list-style: none; /* Removes required bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Horizontal layout for links */
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px; /* Margin between list items/links */
+    padding: 0;
+}
+
+/* Hyperlinks in Navigation (Element Selector) */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 5px 10px; /* Padding for the link touch/hover area */
+    display: block;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* 4. CONTENT STYLING (Element and Class Selectors) */
+
+/* Main Article/Content Area (Text Margins/Padding) */
+article {
+    padding: 30px; /* Padding inside the article content */
+}
+
+/* Headlines (H2) */
+h2 {
+    color: var(--accent-color); /* Font color */
+    font-size: 1.8em; /* Font size */
+    margin-top: 0;
+    padding-bottom: 10px; /* Padding below the headline */
+    border-bottom: 2px solid var(--border-color);
+    font-style: italic; /* Font style */
+}
+
+/* Sub-Headlines (H3) */
+h3 {
+    color: var(--text-dark);
+    font-size: 1.3em;
+    font-weight: 700; /* Font weight */
+    margin-top: 25px; /* Text margin above the headline */
+}
+
+/* Paragraphs and Body Text (Element Selector) */
+p {
+    margin-bottom: 15px; /* Text margin below paragraphs */
+    text-align: justify;
+}
+
+/* General Hyperlinks (Class Selector) */
+.general-link {
+    color: var(--accent-color);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.general-link:hover {
+    color: var(--text-dark);
+}
+
+/* 5. IMAGE STYLING (Class Selector) */
+.content-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Centers the image and provides margin */
+    border: 5px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* 6. FOOTER STYLING (Element Selector) */
+footer {
+    text-align: center;
+    padding: 20px; /* Padding for the footer content */
+    background-color: #eaf1f6; /* Background color */
+    color: var(--text-dark);
+    font-size: 0.8em;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Small links in the footer */
+footer small a {
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+footer small a:hover {
+    text-decoration: underline;
+}

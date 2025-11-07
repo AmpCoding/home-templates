@@ -1,0 +1,89 @@
+<!--
+  Developer: Aleisha Peterson
+  Date: November 6, 2025
+  File Name: gallery.html
+  Description: A simple gallery page showcasing two placeholder images, styled using the external CSS.
+-->
+<!DOCTYPE html>
+<!-- The root element of the HTML document -->
+<html lang="en">
+<head>
+    <!-- Metadata about the HTML document -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title of the document, customized for this page -->
+    <title>Gallery - My Site</title>
+
+    <!-- LINK TO EXTERNAL CSS STYLESHEET -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- SITE CONTAINER (ID Selector) -->
+    <div id="site-container">
+
+        <!-- HEADER SECTION -->
+        <header>
+            <h1>My Personal Portfolio <!--&nbsp; &#x1F30C;--></h1>
+        </header>
+
+        <!-- NAVIGATION SECTION (Consistent links) -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="interests.html">My Interests</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTENT SECTION (ARTICLE) - Unique Content Added Here -->
+        <article>
+            <h2>Visual Showcase: Work and Inspiration</h2>
+
+            <!-- SECTION: Placeholder Image 1 -->
+            <section>
+                <h3>Development Environment Concept</h3>
+                <p>
+                    This image represents a clean, modern development environment, illustrating my approach to organized coding.
+                </p>
+                <!--
+                  IMAGE ELEMENT 1:
+                  Uses a placeholder image URL, alt text for accessibility, and the required content-image class for styling.
+                -->
+                <img src="https://placehold.co/800x400/3498db/ffffff?text=Modern+Workspace+Concept" alt="A blue and white placeholder image for a modern workspace" class="content-image">
+            </section>
+
+            <!-- SECTION: Placeholder Image 2 -->
+            <section>
+                <h3>Inspiration: Minimalist Design</h3>
+                <p>
+                    This is an example of the kind of minimalist aesthetic I strive for in my web projects.
+                </p>
+                 <!--
+                  IMAGE ELEMENT 2:
+                  Second placeholder image with alt text and consistent styling.
+                -->
+                <img src="https://placehold.co/400x500/2c3e50/f4f7f6?text=Minimalist+Design+Inspiration" alt="A dark placeholder image representing a minimalist design layout" class="content-image">
+            </section>
+
+        </article>
+
+        <!-- FOOTER SECTION -->
+        <footer>
+            <nav>
+                <small>
+                    <a href="#top">Back to Top</a> |
+                    <a href="sitemap.html">Sitemap</a> |
+                    <a href="privacy.html">Privacy Policy</a>
+                </small>
+            </nav>
+            <p>&copy; 2025 Aleisha Peterson. All rights reserved. <span class="general-link">Styled by styles.css.</span></p>
+        </footer>
+
+    </div> <!-- End of #site-container -->
+
+</body>
+</html>
