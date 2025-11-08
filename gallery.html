@@ -2,90 +2,87 @@
   Developer: Aleisha Peterson
   Date: November 6, 2025
   File Name: gallery.html
-  Description: A simple gallery page showcasing two placeholder images, styled using the external CSS.
+  Description: Page displaying images using a responsive CSS Grid layout for dynamic columns.
 -->
 <!DOCTYPE html>
-<!-- The root element of the HTML document -->
 <html lang="en">
 <head>
-    <!-- Metadata about the HTML document -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- The title of the document, customized for this page -->
-    <title>Gallery - My Site</title>
-
-    <!-- LINK TO EXTERNAL CSS STYLESHEET -->
+    <title>Gallery - Aleisha Peterson's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="page-wrapper">
 
-    <!-- SITE CONTAINER (ID Selector) -->
-    <div id="site-container">
-
-        <!-- HEADER SECTION -->
         <header>
-            <h1>My Personal Portfolio <!--&nbsp; &#x1F30C;--></h1>
+            <h1>My Personal Portfolio &nbsp; &#x1F30C;</h1>
         </header>
 
-        <!-- NAVIGATION SECTION (Consistent links) -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="interests.html">My Interests</a></li>
+                <li><a href="interests.html">Interests</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
-        <!-- CONTENT SECTION (ARTICLE) - Unique Content Added Here -->
-        <article>
-            <h2>Visual Showcase: Work and Inspiration</h2>
+        <main style="display: block;">
+            <!-- Note: We override 'display: flex' on 'main' here because we don't want a sidebar.
+                 The default layout is still handled by the 'article' tag's flow. -->
+            <article>
+                <h2>Visual Projects and Photography</h2>
 
-            <!-- SECTION: Placeholder Image 1 -->
-            <section>
-                <h3>Development Environment Concept</h3>
                 <p>
-                    This image represents a clean, modern development environment, illustrating my approach to organized coding.
+                    This section demonstrates a fully responsive image gallery using CSS Grid. The layout is designed to dynamically adjust the number of columns based on the available browser width, ensuring optimal viewing on any device. It will automatically flow from a single column on mobile to three or four columns on a desktop screen.
                 </p>
-                <!--
-                  IMAGE ELEMENT 1:
-                  Uses a placeholder image URL, alt text for accessibility, and the required content-image class for styling.
-                -->
-                <!-- <img src="https://placehold.co/800x400/3498db/ffffff?text=Modern+Workspace+Concept" alt="A blue and white placeholder image for a modern workspace" class="content-image"> -->
-                <img src="development_environment_concept.jpg" alt="a workstation with laptop and books" class="content-image">
-            </section>
 
-            <!-- SECTION: Placeholder Image 2 -->
-            <section>
-                <h3>Inspiration: Minimalist Design</h3>
-                <p>
-                    This is an example of the kind of minimalist aesthetic I strive for in my web projects.
+                <!-- GALLERY GRID CONTAINER (Custom CSS Grid rules are in styles.css) -->
+                <div class="gallery-grid">
+                    <!-- Image 1 -->
+                    <div class="gallery-grid-item">
+                        <img src="city_lights.jpg" alt="Abstract city lights photo">
+                        <p style="text-align: center; margin-bottom: 0;">City Lights (2025)</p>
+                    </div>
+
+                    <!-- Image 2 -->
+                    <div class="gallery-grid-item">
+                        <img src="desert_vista.jpg" alt="Desert landscape photo">
+                        <p style="text-align: center; margin-bottom: 0;">Desert Vista (2024)</p>
+                    </div>
+
+                    <!-- Image 3 -->
+                    <div class="gallery-grid-item">
+                        <img src="macro_bloom.jpg" alt="Macro nature photo">
+                        <p style="text-align: center; margin-bottom: 0;">Macro Bloom (2025)</p>
+                    </div>
+
+                    <!-- Image 4 -->
+                    <div class="gallery-grid-item">
+                        <img src="geometric_study.jpg" alt="Architectural study photo">
+                        <p style="text-align: center; margin-bottom: 0;">Geometric Study (2024)</p>
+                    </div>
+                </div>
+
+                <p style="margin-top: 20px;">
+                    The `repeat(auto-fit, minmax(300px, 1fr))` CSS rule is what allows the images to flow dynamically. Try resizing your browser to see the columns automatically adjust!
                 </p>
-                 <!--
-                  IMAGE ELEMENT 2:
-                  Second placeholder image with alt text and consistent styling.
-                -->
-                <!-- <img src="https://placehold.co/400x500/2c3e50/f4f7f6?text=Minimalist+Design+Inspiration" alt="A dark placeholder image representing a minimalist design layout" class="content-image"> -->
-                <img src="minimalist_design_inspo.jpg" alt="a minimalist design" class="content-image">
-            </section>
+            </article>
+        </main>
 
-        </article>
-
-        <!-- FOOTER SECTION -->
         <footer>
-            <nav>
+            <nav class="nav-footer">
                 <small>
                     <a href="#top">Back to Top</a> |
                     <a href="sitemap.html">Sitemap</a> |
                     <a href="privacy.html">Privacy Policy</a>
                 </small>
             </nav>
-            <p>&copy; 2025 Aleisha Peterson. All rights reserved. <span class="general-link">Styled by styles.css.</span></p>
+            <p>&copy; 2025 Aleisha Peterson. All rights reserved. Built with pure, responsive HTML and CSS.</p>
         </footer>
 
-    </div> <!-- End of #site-container -->
-
+    </div>
 </body>
 </html>

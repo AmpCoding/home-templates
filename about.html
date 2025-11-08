@@ -2,81 +2,84 @@
   Developer: Aleisha Peterson
   Date: November 6, 2025
   File Name: about.html
-  Description: Provides information about the site creator's background, experience, and development philosophy, applying the external stylesheet.
+  Description: Page detailing the site owner's background, using the consistent Grid/Flexbox layout.
 -->
 <!DOCTYPE html>
-<!-- The root element of the HTML document -->
 <html lang="en">
 <head>
-    <!-- Metadata about the HTML document -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- The title of the document, customized for this page -->
-    <title>About Me - My Site</title>
-
-    <!-- LINK TO EXTERNAL CSS STYLESHEET -->
+    <title>About Me - Aleisha Peterson's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="page-wrapper">
 
-    <!-- SITE CONTAINER (ID Selector) -->
-    <div id="site-container">
-
-        <!-- HEADER SECTION -->
         <header>
-            <h1>My Personal Portfolio <!--&nbsp; &#x1F30C;--></h1>
+            <h1>My Personal Portfolio &nbsp; &#x1F30C;</h1>
         </header>
 
-        <!-- NAVIGATION SECTION (Consistent links) -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="interests.html">My Interests</a></li>
+                <li><a href="interests.html">Interests</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
-        <!-- CONTENT SECTION (ARTICLE) - Unique Content Added Here -->
-        <article>
-            <h2>My Background and Development Philosophy</h2>
+        <main>
+            <!-- Primary Content Area -->
+            <article>
+                <h2>A Deep Dive into My Journey</h2>
 
-            <!-- SECTION: Introduction and Philosophy -->
-            <section>
-                <h3>The Journey Begins</h3>
+                <section>
+                    <h3>Professional Background</h3>
+                    <p>
+                        I started my career in digital communication, which quickly evolved into a passion for the underlying technology of the web. My focus shifted to web development when I realized the potential for accessible and well-structured user interfaces. I believe in writing code that is clean, readable, and easy to maintain, starting with the foundation of semantic HTML and responsive CSS.
+                    </p>
+                    <p>
+                        My skills currently center around front-end technologies. This website is a working example of using modern layout techniques (CSS Grid for the frame and Flexbox for content flow) to achieve a seamless cross-device experience. The layout here, just like on the homepage, uses Flexbox to present this main article alongside the supplemental information in the sidebar.
+                    </p>
+                    <img src="IMG_6084.jpg" alt="A professional portrait" class="aboutme-image">
+                </section>
+
+                <section>
+                    <h3>Future Goals</h3>
+                    <p>
+                        My next steps involve integrating JavaScript to handle complex state management and dynamic user interactions. I am committed to continuous learning and applying best practices in performance and security. I welcome collaboration and feedback on any of my projects.
+                    </p>
+                </section>
+            </article>
+
+            <!-- Secondary Content (Sidebar) -->
+            <aside>
+                <h3>Core Skills</h3>
+                <ul>
+                    <li>HTML5 & Semantics</li>
+                    <li>CSS3 (Flexbox & Grid)</li>
+                    <li>Responsive Web Design</li>
+                    <li>Version Control (Git)</li>
+                    <li>Basic JavaScript</li>
+                </ul>
                 <p>
-                    I started my professional journey with a deep interest in how digital experiences are constructed. My focus has always been on learning the foundational elements first, which is why I prioritize structured HTML and well-organized, semantic code. I believe that a website must be fundamentally sound before any visual layer is added.
+                    Connect with me on social media or send an email via the <a href="contact.html" class="general-link">Contact Page</a>.
                 </p>
-            </section>
+            </aside>
+        </main>
 
-            <!-- SECTION: Goals and Expertise -->
-            <section>
-                <h3>Current Focus and Future Goals</h3>
-                <p>
-                    Currently, I am dedicated to mastering CSS, specifically in creating responsive layouts and ensuring cross-browser compatibility. My goal is to eventually move into front-end frameworks and full-stack development. I am passionate about creating accessible and user-friendly web applications that serve a clear purpose.
-                </p>
-                <p>
-                    When I'm not coding, I enjoy learning about emerging web technologies and contributing to online communities focused on coding best practices.
-                </p>
-            </section>
-
-        </article>
-
-        <!-- FOOTER SECTION -->
         <footer>
-            <nav>
+            <nav class="nav-footer">
                 <small>
                     <a href="#top">Back to Top</a> |
                     <a href="sitemap.html">Sitemap</a> |
                     <a href="privacy.html">Privacy Policy</a>
                 </small>
             </nav>
-            <p>&copy; 2025 Aleisha Peterson. All rights reserved. <span class="general-link">Styled by styles.css.</span></p>
+            <p>&copy; 2025 Aleisha Peterson. All rights reserved. Built with pure, responsive HTML and CSS.</p>
         </footer>
 
-    </div> <!-- End of #site-container -->
-
+    </div>
 </body>
 </html>

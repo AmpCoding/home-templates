@@ -2,89 +2,110 @@
   Developer: Aleisha Peterson
   Date: November 6, 2025
   File Name: contact.html
-  Description: Provides contact details and methods for getting in touch with the site creator, applying the external stylesheet.
+  Description: Page providing contact information, featuring a styled HTML table.
 -->
 <!DOCTYPE html>
-<!-- The root element of the HTML document -->
 <html lang="en">
 <head>
-    <!-- Metadata about the HTML document -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- The title of the document, customized for this page -->
-    <title>Contact - My Site</title>
-
-    <!-- LINK TO EXTERNAL CSS STYLESHEET -->
+    <title>Contact - Aleisha Peterson's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="page-wrapper">
 
-    <!-- SITE CONTAINER (ID Selector) -->
-    <div id="site-container">
-
-        <!-- HEADER SECTION -->
         <header>
-            <h1>My Personal Portfolio <!--&nbsp; &#x1F30C;--></h1>
+            <h1>My Personal Portfolio &nbsp; &#x1F30C;</h1>
         </header>
 
-        <!-- NAVIGATION SECTION (Consistent links) -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="interests.html">My Interests</a></li>
+                <li><a href="interests.html">Interests</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
-        <!-- CONTENT SECTION (ARTICLE) - Unique Content Added Here -->
-        <article>
-            <h2>Get In Touch</h2>
+        <main style="display: block;">
+            <!-- Note: Overriding display: flex on main as we are only using the article content. -->
+            <article>
+                <h2>Get in Touch</h2>
 
-            <!-- SECTION: Contact Methods -->
-            <section>
-                <h3>Primary Contact Details</h3>
-                <p>
-                    I welcome connection for professional inquiries, collaborations, or general questions about web development. I aim to respond to all messages within 48 hours.
-                </p>
-                <!-- Example of an unordered list for contact details -->
-                <ul>
-                    <li><strong>Email:</strong> <a href="mailto:aleishapeterson@email.com" class="general-link">aleishapeterson@email.com</a></li>
-                    <li><strong>LinkedIn:</strong> Connect with me on LinkedIn (link coming soon)</li>
-                    <li><strong>Location:</strong> Northeastern</li>
-                </ul>
-            </section>
+                <section>
+                    <h3>Preferred Contact Methods</h3>
+                    <p>
+                        The best way to reach me is via email. Please allow up to 48 hours for a detailed response. For quick inquiries, feel free to connect with me on LinkedIn.
+                    </p>
+                    <ul>
+                        <li>Email: <a href="mailto:aleisha@example.com" class="general-link">aleishapeterson@email.com</a></li>
+                        <li>LinkedIn: <a href="#" class="general-link">/in/aleishapeterson</a></li>
+                        <li>GitHub: <a href="#" class="general-link">/aleishapeterson-dev</a></li>
+                    </ul>
+                </section>
 
-            <!-- SECTION: Social Media -->
-            <section>
-                <h3>Social Presence</h3>
-                <p>
-                    You can also follow my progress and thoughts on web development on my various social media platforms.
-                </p>
-                <p>
-                    <a href="#" class="general-link">Twitter/X Profile</a> |
-                    <a href="#" class="general-link">GitHub Profile</a> |
-                    <a href="#" class="general-link">Portfolio Blog</a>
-                </p>
-            </section>
+                <section>
+                    <h3>Office Hours and Availability</h3>
+                    <p>
+                        Below is a CSS-styled HTML table outlining general availability for virtual meetings. The table is designed to be fully responsive, maintaining consistent styling established in `styles.css`.
+                    </p>
 
-        </article>
+                    <!-- REQUIRED HTML TABLE STYLED WITH CSS -->
+                    <table class="styled-table">
+                        <!-- Table Header (uses <th> elements) -->
+                        <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Morning (9:00 - 12:00 EST)</th>
+                                <th>Afternoon (1:00 - 4:00 EST)</th>
+                            </tr>
+                        </thead>
+                        <!-- Table Body (uses <tr> and <td> elements) -->
+                        <tbody>
+                            <tr>
+                                <td>Monday</td>
+                                <td>Available</td>
+                                <td>Available</td>
+                            </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td>Unavailable (Project Work)</td>
+                                <td>Available</td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td>Available</td>
+                                <td>Unavailable (Meetings)</td>
+                            </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td>Available</td>
+                                <td>Available</td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td>Available</td>
+                                <td>Unavailable (Deep Work)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+        </main>
 
-        <!-- FOOTER SECTION -->
         <footer>
-            <nav>
+            <nav class="nav-footer">
                 <small>
                     <a href="#top">Back to Top</a> |
                     <a href="sitemap.html">Sitemap</a> |
                     <a href="privacy.html">Privacy Policy</a>
                 </small>
             </nav>
-            <p>&copy; 2025 Aleisha Peterson. All rights reserved. <span class="general-link">Styled by styles.css.</span></p>
+            <p>&copy; 2025 Aleisha Peterson. All rights reserved. Built with pure, responsive HTML and CSS.</p>
         </footer>
 
-    </div> <!-- End of #site-container -->
-
+    </div>
 </body>
 </html>

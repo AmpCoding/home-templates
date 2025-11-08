@@ -2,88 +2,85 @@
   Developer: Aleisha Peterson
   Date: November 6, 2025
   File Name: interests.html
-  Description: Details the personal and professional interests of the site creator, applying the external stylesheet.
+  Description: Page detailing the site owner's interests, using the consistent Grid/Flexbox layout.
 -->
 <!DOCTYPE html>
-<!-- The root element of the HTML document -->
 <html lang="en">
 <head>
-    <!-- Metadata about the HTML document -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- The title of the document, customized for this page -->
-    <title>My Interests - My Site</title>
-
-    <!-- LINK TO EXTERNAL CSS STYLESHEET -->
+    <title>Interests - Aleisha Peterson's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="page-wrapper">
 
-    <!-- SITE CONTAINER (ID Selector) -->
-    <div id="site-container">
-
-        <!-- HEADER SECTION -->
         <header>
-            <h1>My Personal Portfolio <!--&nbsp; &#x1F30C;--></h1>
+            <h1>My Personal Portfolio &nbsp; &#x1F30C;</h1>
         </header>
 
-        <!-- NAVIGATION SECTION (Consistent links) -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="interests.html">My Interests</a></li>
+                <li><a href="interests.html">Interests</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
-        <!-- CONTENT SECTION (ARTICLE) - Unique Content Added Here -->
-        <article>
-            <h2>Things That Keep Me Engaged</h2>
+        <main>
+            <!-- Primary Content Area -->
+            <article>
+                <h2>Things That Inspire Me</h2>
 
-            <!-- SECTION: Professional Interests -->
-            <section>
-                <h3>Professional Passions</h3>
+                <section>
+                    <h3>Sustainable Design and Tech</h3>
+                    <p>
+                        I am deeply interested in how technology can be used to promote sustainability and ethical consumption. This extends to web development, where I focus on optimizing performance to reduce the carbon footprint of the applications I build. Efficient code is inherently more sustainable.
+                    </p>
+                    <p>
+                        From minimizing network requests to employing modern image formats, every detail contributes to a faster, greener web. This interest informs my approach to project management and design decisions, always prioritizing lightweight, fast solutions.
+                    </p>
+                    <img src="sustainable_technology.jpg" alt="Placeholder image of a HTML code on a screen" class="content-image">
+                </section>
+
+                <section>
+                    <h3>Photography and Visual Arts</h3>
+                    <p>
+                        Beyond coding, I enjoy digital photography and creating visual art. I find that the principles of composition and negative space in art are directly applicable to good user interface design. If you'd like to see some of my work, please visit the <a href="gallery.html" class="general-link">Gallery Page</a>!
+                    </p>
+                </section>
+            </article>
+
+            <!-- Secondary Content (Sidebar) -->
+            <aside>
+                <h3>Quick Reads</h3>
                 <p>
-                    Beyond the required coursework, my main professional interests lie in the area of <strong>Data Visualization</strong> and <strong>User Experience (UX) Design</strong>. I find immense satisfaction in taking complex data sets and transforming them into interactive, visually appealing charts and graphs that tell a clear story.
+                    A list of topics I'm currently studying:
                 </p>
-                <!-- Example of an unordered list -->
                 <ul>
-                    <li>Semantic HTML structure</li>
-                    <li>Modern CSS (Flexbox and Grid)</li>
-                    <li>Accessibility standards (WCAG)</li>
-                    <li>JavaScript fundamentals</li>
+                    <li>Web Accessibility (WCAG)</li>
+                    <li>Vue.js Framework</li>
+                    <li>Serverless Architecture</li>
                 </ul>
-            </section>
-
-            <!-- SECTION: Personal Interests -->
-            <section>
-                <h3>Personal Hobbies</h3>
                 <p>
-                    When I step away from the keyboard, my interests shift to the analog world. I enjoy <strong>hiking</strong> and exploring national parks, which allows me to disconnect and recharge. I also have a growing interest in photography, primarily focusing on landscapes and urban decay.
+                    These resources help me stay ahead of the curve and maintain high-quality work.
                 </p>
-                <p>
-                    I am constantly looking for ways to blend my personal hobbies with my professional skills, often leading to creative web projects inspired by nature or travel.
-                </p>
-            </section>
+            </aside>
+        </main>
 
-        </article>
-
-        <!-- FOOTER SECTION -->
         <footer>
-            <nav>
+            <nav class="nav-footer">
                 <small>
                     <a href="#top">Back to Top</a> |
                     <a href="sitemap.html">Sitemap</a> |
                     <a href="privacy.html">Privacy Policy</a>
                 </small>
             </nav>
-            <p>&copy; 2025 Aleisha Peterson. All rights reserved. <span class="general-link">Styled by styles.css.</span></p>
+            <p>&copy; 2025 Aleisha Peterson. All rights reserved. Built with pure, responsive HTML and CSS.</p>
         </footer>
 
-    </div> <!-- End of #site-container -->
-
+    </div>
 </body>
 </html>

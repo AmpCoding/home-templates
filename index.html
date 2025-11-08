@@ -1,93 +1,100 @@
 <!--
   Developer: Aleisha Peterson
-  Date: November 5, 2025
+  Date: November 5, 2025 (Revised for Responsive Layout)
   File Name: index.html
-  Description: The main landing page for the site, providing an introduction to the site owner and the purpose of the web presence.
+  Description: The main landing page for the site, now using a Grid/Flexbox structure for responsiveness.
 -->
 <!DOCTYPE html>
-<!-- The root element of the HTML document -->
 <html lang="en">
 <head>
-    <!-- Metadata about the HTML document -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- The title of the document, shown in the browser tab -->
-    <title>Homepage - My Site</title>
-
-<!-- LINK TO EXTERNAL CSS STYLESHEET -->
+    <title>Homepage - Aleisha Peterson's Portfolio</title>
+    <!-- LINK TO EXTERNAL CSS STYLESHEET (The core of consistency) -->
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Note: Google Font import is now handled directly in styles.css via @import -->
 </head>
 <body>
 
-    <!--
-      HEADER SECTION:
-      Contains introductory content, typically the site's branding, logo, and main heading.
-    -->
-    <header>
-        <!-- Site Name and Logo (using an emoji as a simple logo placeholder) -->
-        <h1>My Personal Portfolio <!--&nbsp; &#x1F30C;--></h1>
-    </header>
+    <!-- CSS GRID WRAPPER: Defines the overall page structure (header, nav, main, footer) -->
+    <div class="page-wrapper">
 
-    <!--
-      NAVIGATION SECTION:
-      Contains a list of links for navigating the site's main pages.
-      Note: Links are included but are currently non-functional (will be implemented in a later assessment).
-    -->
-    <nav>
-        <!-- Unordered list of site links -->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="interests.html">Interests</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+        <!-- HEADER SECTION: Grid Area 'header' -->
+        <header>
+            <h1>My Personal Portfolio &nbsp; &#x1F30C;</h1>
+        </header>
 
-    <!--
-      CONTENT SECTION (ARTICLE):
-      Contains the main, independent content of the document, customized for the homepage.
-      This uses the <article> tag for the main, self-contained body of text.
-    -->
-    <article>
-        <h2>Welcome to My Digital Space</h2>
-
-        <!--
-          SECTION:
-          A thematic grouping of content inside the main article.
-          This section contains the required introductory information.
-        -->
-        <section>
-            <h3>A Quick Introduction</h3>
-            <p>
-                Hello! I am Aleisha Peterson, and this is my digital home. This site is designed to be a showcase for my journey in web development, focusing on the fundamentals of structured, accessible content through clean HTML. I believe that a strong foundation starts with well-documented and semantic code.
-            </p>
-            <p>
-                Here, you will find information about my background, the projects I am currently working on, and how you can get in touch with me. I am currently focused on mastering HTML structure before moving on to styling with CSS and adding interactivity with JavaScript.
-            </p>
-            <p>
-                Thank you for visiting! Please use the navigation links above to explore the rest of the site (pages coming soon!).
-            </p>
-        </section>
-
-    </article>
-
-    <!--
-      FOOTER SECTION:
-      Contains supplementary information like copyright notices, secondary links, and authorship information.
-    -->
-    <footer>
-        <!-- Secondary Navigation (simple text list) -->
+        <!-- NAVIGATION SECTION: Grid Area 'nav' -->
         <nav>
-            <small>
-                <a href="#top">Back to Top</a> |
-                <a href="sitemap.html">Sitemap</a> |
-                <a href="privacy.html">Privacy Policy</a>
-            </small>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="interests.html">Interests</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
-        <p>&copy; 2025 Aleisha Peterson. All rights reserved. Built with pure, unstyled HTML.</p>
-    </footer>
 
+        <!-- MAIN CONTENT CONTAINER: Grid Area 'main-content' -->
+        <!-- This container uses Flexbox to manage the article (75%) and aside (25%) side-by-side -->
+        <main>
+            <!-- Primary Content (Takes up the majority of the space on desktop) -->
+            <article>
+                <h2>Welcome to My Responsive Digital Space</h2>
+
+                <section>
+                    <h3>A Quick Introduction to My Design</h3>
+                    <p>
+                        Hello! I am Aleisha Peterson, and this site demonstrates my approach to modern, responsive web design. The entire page frame (header, navigation, and footer) is managed by CSS Grid, ensuring structural integrity across all devices. The primary content and the sidebar you see here are managed by CSS Flexbox, allowing them to sit side-by-side on large screens and stack vertically on mobile. This combination prevents excessive horizontal scrolling.
+                    </p>
+                    <img src="responsive_design.jpg" alt="Abstract placeholder image demonstrating responsive design" class="home-image">
+                    <p>
+                        My focus is on structured, accessible content through clean HTML, which is then styled for consistency using the external `styles.css` file. Every headline, paragraph, and link on every page will look consistent, creating a unified user experience.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Flexibility in Action</h3>
+                    <p>
+                        Notice how the layout changes when you resize your browser window! The content smoothly reflows: the navigation links wrap, the main column and sidebar stack, and the overall container adjusts its width fluidly using percentage units. This is the power of a liquid, responsive layout.
+                    </p>
+                    <p>
+                        Thank you for visiting! Please explore the other pages using the navigation links above to see the consistency in action, especially the special layouts on the Contact and Gallery pages.
+                    </p>
+                </section>
+
+            </article>
+
+            <!-- Secondary Content (Sidebar - Takes up less space on desktop) -->
+            <aside>
+                <h3>Site Features</h3>
+                <ul>
+                    <li>Responsive Frame: CSS Grid</li>
+                    <li>Content Flow: CSS Flexbox</li>
+                    <li>Consistency: Single CSS file</li>
+                    <li>Special Layouts: Grid on Gallery, Table on Contact</li>
+                </ul>
+                <p>
+                    Get Started: Ready to connect? Visit the <a href="contact.html" class="general-link">Contact Page</a> to see my office hours table!
+                </p>
+                <img src="sidebar_image.jpg" alt="Placeholder graphic for sidebar" class="content-image" style="margin-top: 5px;">
+            </aside>
+        </main>
+
+        <!-- FOOTER SECTION: Grid Area 'footer' -->
+        <footer>
+            <!-- Secondary Navigation (simple text list) -->
+            <nav class="nav-footer">
+                <small>
+                    <a href="#top">Back to Top</a> |
+                    <a href="sitemap.html">Sitemap</a> |
+                    <a href="privacy.html">Privacy Policy</a>
+                </small>
+            </nav>
+            <p>&copy; 2025 Aleisha Peterson. All rights reserved. Built with pure, responsive HTML and CSS.</p>
+        </footer>
+
+    </div>
 </body>
 </html>
