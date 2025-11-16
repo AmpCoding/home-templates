@@ -1,8 +1,8 @@
 <!--
   Developer: Aleisha Peterson
-  Date: November 6, 2025
+  Date: November 16, 2025 (Updated with Comprehensive Contact Form)
   File Name: contact.html
-  Description: Page providing contact information, featuring a styled HTML table.
+  Description: Page providing contact information and a CSS-styled, functional web form.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +30,6 @@
         </nav>
 
         <main style="display: block;">
-            <!-- Note: Overriding display: flex on main as we are only using the article content. -->
             <article>
                 <h2>Get in Touch</h2>
 
@@ -40,21 +39,19 @@
                         The best way to reach me is via email. Please allow up to 48 hours for a detailed response. For quick inquiries, feel free to connect with me on LinkedIn.
                     </p>
                     <ul>
-                        <li>Email: <a href="mailto:aleisha@example.com" class="general-link">aleishapeterson@email.com</a></li>
+                        <li>Email: <a href="mailto:aleisha@example.com" class="general-link">aleisha@example.com</a></li>
                         <li>LinkedIn: <a href="#" class="general-link">/in/aleishapeterson</a></li>
-                        <li>GitHub: <a href="#" class="general-link">/aleishapeterson-dev</a></li>
+                        <li>GitHub: <a href="#" class="general-link">/alepeterson-dev</a></li>
                     </ul>
                 </section>
 
                 <section>
                     <h3>Office Hours and Availability</h3>
                     <p>
-                        Below is a CSS-styled HTML table outlining general availability for virtual meetings. The table is designed to be fully responsive, maintaining consistent styling established in `styles.css`.
+                        Below is a **CSS-styled HTML table** outlining general availability for virtual meetings.
                     </p>
 
-                    <!-- REQUIRED HTML TABLE STYLED WITH CSS -->
                     <table class="styled-table">
-                        <!-- Table Header (uses <th> elements) -->
                         <thead>
                             <tr>
                                 <th>Day</th>
@@ -62,7 +59,6 @@
                                 <th>Afternoon (1:00 - 4:00 EST)</th>
                             </tr>
                         </thead>
-                        <!-- Table Body (uses <tr> and <td> elements) -->
                         <tbody>
                             <tr>
                                 <td>Monday</td>
@@ -92,6 +88,93 @@
                         </tbody>
                     </table>
                 </section>
+
+                <section>
+                    <h3>Send a Project Inquiry</h3>
+                    <p>
+                        Use the user-friendly form below for new project proposals, collaboration requests, or detailed inquiries.
+                    </p>
+
+                    <!-- REQUIRED WEB FORM with ID="webForm" and action="#" -->
+                    <form id="webForm" action="#">
+                        <!-- Fieldset: Personal Information -->
+                        <fieldset>
+                            <legend>Your Details</legend>
+
+                            <!-- Textfield: Name -->
+                            <div class="form-group">
+                                <label for="contactName">Full Name:</label>
+                                <input type="text" id="contactName" name="contactName" placeholder="John Doe" required>
+                            </div>
+
+                            <!-- Textfield: Email -->
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address:</label>
+                                <input type="email" id="contactEmail" name="contactEmail" placeholder="you@example.com" required>
+                            </div>
+
+                            <!-- Select List: Preferred Time -->
+                            <div class="form-group">
+                                <label for="preferredTime">Preferred Contact Time:</label>
+                                <select id="preferredTime" name="preferredTime" required>
+                                    <option value="">-- Please Select --</option>
+                                    <option value="Morning">Morning (9am - 12pm EST)</option>
+                                    <option value="Afternoon">Afternoon (1pm - 4pm EST)</option>
+                                    <option value="Evening">Evening (5pm - 8pm EST)</option>
+                                </select>
+                            </div>
+                        </fieldset>
+
+                        <!-- Fieldset: Project Details -->
+                        <fieldset>
+                            <legend>Project Information</legend>
+
+                            <!-- Radio Buttons: Project Type -->
+                            <div class="form-group">
+                                <label>What type of project is this?</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="typeNew" name="projectType" value="New Website" required>
+                                    <label for="typeNew">New Website</label>
+
+                                    <input type="radio" id="typeRedesign" name="projectType" value="Redesign/Update">
+                                    <label for="typeRedesign">Redesign/Update</label>
+
+                                    <input type="radio" id="typeConsult" name="projectType" value="Consultation Only">
+                                    <label for="typeConsult">Consultation Only</label>
+                                </div>
+                            </div>
+
+                            <!-- Checkboxes: Services Needed -->
+                            <div class="form-group">
+                                <label>Which services are you interested in?</label>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="serviceHTML" name="servicesNeeded" value="HTML/CSS Structure">
+                                    <label for="serviceHTML">HTML/CSS Structure</label>
+
+                                    <input type="checkbox" id="serviceResponsive" name="servicesNeeded" value="Responsive Layout">
+                                    <label for="serviceResponsive">Responsive Layout</label>
+
+                                    <input type="checkbox" id="serviceJS" name="servicesNeeded" value="JavaScript Implementation">
+                                    <label for="serviceJS">JavaScript Implementation</label>
+                                </div>
+                            </div>
+
+                            <!-- Textarea: Message -->
+                            <div class="form-group">
+                                <label for="projectMessage">Detailed Project Message:</label>
+                                <textarea id="projectMessage" name="projectMessage" rows="5" placeholder="Briefly describe your project needs and goals..."></textarea>
+                            </div>
+                        </fieldset>
+
+                        <!-- Submit Button -->
+                        <input type="submit" value="Send Inquiry">
+
+                    </form>
+
+                    <!-- REQUIRED Output Div with ID="output" -->
+                    <p><div id="output"></div></p>
+
+                </section>
             </article>
         </main>
 
@@ -107,5 +190,7 @@
         </footer>
 
     </div>
+    <!-- REQUIRED SCRIPT LINK JUST ABOVE THE CLOSING </body> TAG -->
+    <script src="script.js"></script>
 </body>
 </html>

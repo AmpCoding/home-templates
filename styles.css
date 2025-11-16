@@ -1,6 +1,6 @@
 /*
   Developer: Aleisha Peterson
-  Date: November 10, 2025 (Updated for Responsive Video Embed)
+  Date: November 16, 2025 (Updated for Responsive Video Embed and Form Styling)
   File Name: styles.css
   Description: Central external stylesheet providing consistent typography, color scheme, and fully responsive layout using CSS Grid and Flexbox.
 */
@@ -301,7 +301,112 @@ p {
     border: 0;
 }
 
-/* 9. FOOTER STYLING */
+/* --- 9. CONTACT FORM STYLING (New Section for webForm) --- */
+
+form {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+legend {
+    font-weight: 700;
+    color: var(--accent-color);
+    font-size: 1.2em;
+    padding: 0 10px;
+}
+
+/* Styling for text inputs, textarea, and select */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect the overall width */
+    font-family: var(--primary-font);
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Blue shadow on focus */
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Radio/Checkbox Container Styling */
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.radio-group label, .checkbox-group label {
+    font-weight: 400; /* Reset font weight for internal labels */
+}
+
+/* Submit Button Styling */
+#webForm input[type="submit"] {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.1s;
+    width: 100%;
+}
+
+#webForm input[type="submit"]:hover {
+    background-color: #2980b9; /* Slightly darker blue */
+    transform: translateY(-1px);
+}
+
+/* Output Area Styling */
+#output {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px dashed var(--accent-color);
+    background-color: #eaf1f6;
+    border-radius: 8px;
+    white-space: pre-wrap; /* Preserve formatting for displaying output */
+    font-family: monospace;
+    color: var(--text-dark);
+    display: none; /* Hide until content is submitted */
+}
+
+/* 10. FOOTER STYLING */
 footer {
     text-align: center;
     padding: 20px 0;
