@@ -1,6 +1,6 @@
 <!--
   Developer: Aleisha Peterson
-  Date: November 5, 2025 (Revised for Responsive Layout)
+  Date: November 5, 2025 (Revised for Responsive Layout and Clickable Images)
   File Name: index.html
   Description: The main landing page for the site, now using a Grid/Flexbox structure for responsiveness.
 -->
@@ -48,19 +48,19 @@
                     <p>
                         Hello! I am Aleisha Peterson, and this site demonstrates my approach to modern, responsive web design. The entire page frame (header, navigation, and footer) is managed by CSS Grid, ensuring structural integrity across all devices. The primary content and the sidebar you see here are managed by CSS Flexbox, allowing them to sit side-by-side on large screens and stack vertically on mobile. This combination prevents excessive horizontal scrolling.
                     </p>
-                    <img src="responsive_design.jpg" alt="Abstract placeholder image demonstrating responsive design" class="home-image">
+                    <!-- WRAPPED IMAGE IN ANCHOR TAG -->
+                    <a href="https://placehold.co/1200x600/2c3e50/f4f7f6?text=Responsive+Design+-+Full+View" target="_blank">
+                        <img src="https://placehold.co/800x400/2c3e50/f4f7f6?text=Responsive+Design" alt="Abstract placeholder image demonstrating responsive design" class="content-image">
+                    </a>
                     <p>
                         My focus is on structured, accessible content through clean HTML, which is then styled for consistency using the external `styles.css` file. Every headline, paragraph, and link on every page will look consistent, creating a unified user experience.
                     </p>
                 </section>
 
                 <section>
-                    <h3>Flexibility in Action</h3>
+                    <h3>Fluid Layout Demonstration</h3>
                     <p>
-                        Notice how the layout changes when you resize your browser window! The content smoothly reflows: the navigation links wrap, the main column and sidebar stack, and the overall container adjusts its width fluidly using percentage units. This is the power of a liquid, responsive layout.
-                    </p>
-                    <p>
-                        Thank you for visiting! Please explore the other pages using the navigation links above to see the consistency in action, especially the special layouts on the Contact and Gallery pages.
+                        Notice how the layout changes when you resize your browser window! The content smoothly reflows: the navigation links wrap, the main column and sidebar stack, and the overall container adjusts its width fluidly using percentage units. This is the power of a liquid, responsive layout. If you'd like to see an example of my interests, including a featured video, please visit the <a href="interests.html" class="general-link">Interests Page</a>.
                     </p>
                 </section>
 
@@ -74,11 +74,15 @@
                     <li>Content Flow: CSS Flexbox</li>
                     <li>Consistency: Single CSS file</li>
                     <li>Special Layouts: Grid on Gallery, Table on Contact</li>
+                    <li>New: Responsive Video Embed (on Interests page)</li>
                 </ul>
                 <p>
                     Get Started: Ready to connect? Visit the <a href="contact.html" class="general-link">Contact Page</a> to see my office hours table!
                 </p>
-                <img src="sidebar_image.jpg" alt="Placeholder graphic for sidebar" class="content-image" style="margin-top: 5px;">
+                <!-- WRAPPED IMAGE IN ANCHOR TAG -->
+                <a href="https://placehold.co/400x300/3498db/ffffff?text=Sidebar+Image+-+Full+View" target="_blank">
+                    <img src="https://placehold.co/200x150/3498db/ffffff?text=Sidebar+Image" alt="Placeholder graphic for sidebar" class="content-image" style="margin-top: 5px;">
+                </a>
             </aside>
         </main>
 

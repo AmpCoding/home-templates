@@ -1,8 +1,8 @@
 <!--
   Developer: Aleisha Peterson
-  Date: November 6, 2025
+  Date: November 10, 2025 (Final)
   File Name: gallery.html
-  Description: Page displaying images using a responsive CSS Grid layout for dynamic columns.
+  Description: Page showcasing a gallery of personal visual works using the responsive grid layout.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -29,47 +29,54 @@
             </ul>
         </nav>
 
-        <main style="display: block;">
-            <!-- Note: We override 'display: flex' on 'main' here because we don't want a sidebar.
-                 The default layout is still handled by the 'article' tag's flow. -->
+        <main>
             <article>
-                <h2>Visual Projects and Photography</h2>
-
+                <h2>Digital Photography and Visual Works</h2>
                 <p>
-                    This section demonstrates a fully responsive image gallery using CSS Grid. The layout is designed to dynamically adjust the number of columns based on the available browser width, ensuring optimal viewing on any device. It will automatically flow from a single column on mobile to three or four columns on a desktop screen.
+                    This gallery showcases some of my personal projects in digital photography and graphic design. Click any image to view the full-sized version in a new browser tab.
                 </p>
 
                 <!-- GALLERY GRID CONTAINER (Custom CSS Grid rules are in styles.css) -->
                 <div class="gallery-grid">
+
                     <!-- Image 1 -->
                     <div class="gallery-grid-item">
-                        <img src="city_lights.jpg" alt="Abstract city lights photo">
+                        <a href="https://placehold.co/800x600/3498db/ffffff?text=City+Lights+-+Full+View" target="_blank">
+                            <!-- Using a placeholder URL to ensure image display -->
+                            <img src="https://placehold.co/400x300/3498db/ffffff?text=City+Lights" alt="Abstract city lights photo" >
+                        </a>
                         <p style="text-align: center; margin-bottom: 0;">City Lights (2025)</p>
                     </div>
 
                     <!-- Image 2 -->
                     <div class="gallery-grid-item">
-                        <img src="desert_vista.jpg" alt="Desert landscape photo">
+                        <a href="https://placehold.co/800x600/2ecc71/ffffff?text=Desert+Vista+-+Full+View" target="_blank">
+                            <!-- Using a placeholder URL to ensure image display -->
+                            <img src="https://placehold.co/400x300/2ecc71/ffffff?text=Desert+Vista" alt="Desert landscape photo">
+                        </a>
                         <p style="text-align: center; margin-bottom: 0;">Desert Vista (2024)</p>
                     </div>
 
                     <!-- Image 3 -->
                     <div class="gallery-grid-item">
-                        <img src="macro_bloom.jpg" alt="Macro nature photo">
+                        <a href="https://placehold.co/800x600/e74c3c/ffffff?text=Macro+Bloom+-+Full+View" target="_blank">
+                            <!-- Using a placeholder URL to ensure image display -->
+                            <img src="https://placehold.co/400x300/e74c3c/ffffff?text=Macro+Bloom" alt="Macro nature photo">
+                        </a>
                         <p style="text-align: center; margin-bottom: 0;">Macro Bloom (2025)</p>
                     </div>
 
                     <!-- Image 4 -->
                     <div class="gallery-grid-item">
-                        <img src="geometric_study.jpg" alt="Architectural study photo">
+                        <a href="https://placehold.co/800x600/f39c12/ffffff?text=Geometric+Study+-+Full+View" target="_blank">
+                            <!-- Using a placeholder URL to ensure image display -->
+                            <img src="https://placehold.co/400x300/f39c12/ffffff?text=Geometric+Study" alt="Architectural study photo">
+                        </a>
                         <p style="text-align: center; margin-bottom: 0;">Geometric Study (2024)</p>
                     </div>
                 </div>
-
-                <p style="margin-top: 20px;">
-                    The `repeat(auto-fit, minmax(300px, 1fr))` CSS rule is what allows the images to flow dynamically. Try resizing your browser to see the columns automatically adjust!
-                </p>
             </article>
+
         </main>
 
         <footer>
